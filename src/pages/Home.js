@@ -24,7 +24,7 @@ function RevealSection({ children, delay = 0, className = '' }) {
 }
 
 export default function Home() {
-  const { addItem, _setIsOpen } = useCart();
+  const { addItem } = useCart();
   const showToast = useToast();
 
   const handleAdd = (item) => {

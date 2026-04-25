@@ -17,7 +17,7 @@ function RevealItem({ children, delay = 0 }) {
 
 export default function Menu() {
   const [activeTab, setActiveTab] = useState('all');
-  const { addItem, _setIsOpen } = useCart();
+  const { addItem } = useCart();
   const showToast = useToast();
 
   const filtered = activeTab === 'all' ? menuItems : menuItems.filter(i => i.cat === activeTab);
