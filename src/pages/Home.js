@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { useToast } from '../components/Toast';
 import { menuItems, galleryImages, reviews, heroImages } from '../data';
-import { useReveal } from '../Usereveal';
 
 function RevealSection({ children, delay = 0, className = '' }) {
   const ref = useRef(null);
@@ -25,7 +24,7 @@ function RevealSection({ children, delay = 0, className = '' }) {
 }
 
 export default function Home() {
-  const { addItem, setIsOpen } = useCart();
+  const { addItem, _setIsOpen } = useCart();
   const showToast = useToast();
 
   const handleAdd = (item) => {
